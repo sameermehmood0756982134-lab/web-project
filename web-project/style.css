@@ -1,0 +1,281 @@
+body{
+    font-family:'poppins', sans-serif;
+    text-align:center;
+    background-color:#f5f5f5;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+header{
+    background:black;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0, 0, 0, 0.5);
+}
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+}
+.hero h1{
+    font-size:50px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+.hero h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    margin:10px 0;
+}
+.about, .projects, .contact{
+    padding:30px;
+    text-align:center;
+}
+
+#projects{
+    padding:50px;
+    text-align:center;
+
+}
+.projects-container{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.project-card{
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter:blur(10px);
+    color:white;
+    width:300px;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    line-height:1.6;
+    transition:0.3s;
+}
+.project-card:hover{
+     transform:scale(1.05);
+     box-shadow:0 0 20px #00bcd4;
+}
+.project-card img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+.project-card:hover img{
+    transform:scale(1.05);
+}
+.project-card a{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    background:#00bcd4;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    margin:5px;
+}
+
+
+h2::after{
+    content:"";
+    width:60px;
+    height:3px;
+    background:#ff4081;
+    display:block;
+    margin:10px auto;
+}
+section{
+    opacity:0;
+    transform:translateY(50px);
+    transition:0.6s ease;
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
+    margin-bottom:40px;
+}
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.social-links a{
+    color:#00bcd4;
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+.social-links a:hover{
+    color:#ff4081;
+}
+
+
+nav a:hover{
+    color:#00bcd4;
+}
+nav a, .card, .btn{
+    transition:all 0.3s ease;
+}
+.menu-btn{
+    display:none;
+    font-size:25px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+@media (max-width:600px){
+
+    .menu-btn{
+        display:block;
+    }
+
+        nav{
+            display:none;
+            flex-direction:column;
+            background:black;
+            position:absolute;
+            top:60px;
+            right:0;
+            width:100%;
+            text-align:center;
+        }
+        nav.active{
+            display:flex;
+        }
+        nav a{
+            margin:15px 0;
+        }
+    }
+    header{
+        flex-direction:column;
+        text-align:center;
+}
+
+nav{
+    margin-top:10px;
+}
+
+.projects .card{
+    width:80%;
+    margin:10px auto;
+}
+}
+.project-card p{
+    margin:8px 0;
+}
+.project-card strong{
+    color:#00bcd4;
+} 
+.hero{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+           url("images/bg.jpg");
+            background-size:cover;
+            background-position:center;
+    color:white;
+    text-align:center;
+    padding:60px;
+} 
+.btn{
+    padding:8px 15px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+    background:linear-gradient(45deg, #00bcd4, #007bff);
+    color:white;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight:bold;
+    letter-spacing:0.5px;
+}
+
+
+     .btn:hover{
+        transform:scale(1.1);
+        background:#0056b3;
+     }
+     .secondary{
+        background:transparent;
+        border:2px solid white;
+     }
+     .secondary:hover{
+        background:white;
+        color:black
+     }
+     .btn.whatsapp{
+        background:#25D366;
+     }
+
+      .dark{
+        background-color:#121212;
+        color:white;
+      }
+      .dark header{
+        background:#1e1e1e;
+      }
+      .dark .project-card{
+        background:#2a2a2a;
+        color:white;
+      }
+      nav a.active{
+        color:#ff4081;
+      }
+      .bar{
+        background:#ddd;
+        height:10px;
+      }
+      .fill.html{
+        width:90%;
+        background:#00bcd4;
+      }
+      .fill.css{
+        width:80%;
+        background:#ff4081;
+      }
+      .fill.javascript{
+        width:70%;
+        background:#ffc107;
+      }
+      html{
+        scroll-behavior:smooth;
+      }
+      .Profile{
+        width:150px;
+        border-radius:50%;
+        height:150px;
+        object-fit:cover;
+        border:3px solid white;
+        box-shadow:0 0 20px rgba(255, 255, 255, 0.5);
+    
+      }
+      .skills img{
+        margin:10px;
+        transition:transform 0.3s;
+      }
+      .skills img:hover{
+        transform:scale(1.2);
+      }
+      hr{
+        border:none;
+        height:2px;
+        background:linear-gradient(to right, transparent, #ff4081, transparent);
+        margin:50px auto;
+        width:80%;
+      }
+  

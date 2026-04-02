@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sameer | Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=poppins&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+
+ 
+</head>
+<body>
+
+
+      <header>
+           <h1>My Portfolio</h1>
+           <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <nav>
+           <a href="#home">Home</a>
+           <a href="#about">About</a>
+           <a href="#services">Services</a>
+           <a href="#projects">Projects</a>
+           <a href="#contact">Contact</a>
+    </nav>
+    </header>
+    <section id="home" class="hero">
+        <img src="images/pic.jpg" alt="Sameer profile picture" class="Profile">
+     <h1>Hello, I'm Sameer 👋</h1>
+     <p>Frontend Developer | HTML CSS JavaScript</p>
+     <h1>I build modern website</h1>
+     <p id="typing"></p>
+
+     <a href="#projects" class="btn">View Work</a>
+     <a href="#contact"  class="btn secondary">Hire Me</a>
+    <p>This website built using  HTML, CSS & JavaScript</p>
+    <button onclick="darkMode()">Dark Mode</button>
+    <p><strong>Skills:</strong> HTML | CSS | JavaScript</p>
+    </section>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am a passionate Frontend Developer who builds responsive and modern websites using HTML, CSS, JavaScript.</p>
+    </section>
+      <hr>
+        <section id="services">
+        <h2>My Services</h2>
+        <div class="services-container">
+
+        <div class="services-card">
+            <h3>Website Design</h3>
+            <p>Modern and clean website design</p>
+        </div>
+        <div class="services-card">
+            <h3>Frontend Development</h3>
+            <p>Responsive websites using HTML, CSS, JavaScript</p>
+        </div>
+        <div class="services-card">
+            <h3>Responsive Design</h3>
+            <p>Mobile-friendly and fast websites</p>
+        </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+            
+        <div class="project-card">
+             <img src="images/project-1.png" width="100%">
+
+        <h3>Todo App</h3>
+        <p>A simple task manager with add, delete save featuers</p>
+        <p><strong> Tech:</strong> HTML, CSS, JS</p>
+        <a href="https://sameermehmood0756982134-lab.github.io/project1/" target="_blank">Live Demo</a>
+        <a href="https://github.com/sameermehmood0756982134/project1/" target="_blank">GitHub</a>
+        </div> 
+         
+
+    <div class="project-card">
+         <img src="images/project-2.png" width="100%">
+ 
+       <h3>Calculator</h3>
+       <p>A Responsive calculator using JavaScript that performs basic math operations.</p>
+       <p><strong> Tech:</strong> HTML, CSS, JS</p>
+       <a href="https://sameermehmood0756982134-lab.github.io/project2/" target="_blank">Live Demo</a>
+       <a href="https://github.com/sameermehmood0756982134/project2/" target="_blank">GitHub</a>
+       </div>
+     <div class="project-card">
+         <img src="images/project-3.png" width="100%">
+
+        <h3>Portfolio Website</h3>
+        <p><strong> Tech:</strong> HTML, CSS, JS</p>
+        <a href="https://sameermehmood0756982134-lab.github.io/project3/" target="_blank">Live Demo</a>
+        <a href="https://github.com/sameermehmood0756982134/project3/" target="_blank">GitHub</a>
+        <p>Responsive portfolio using HTML, CSS & JavaScript</p>
+        </div>
+     <div class="project-card">
+         <img src="images/project-4.png" width="100%">
+
+         <h3>Landing Page</h3>
+         <p><strong> Tech:</strong> HTML, CSS, JS</p>
+         <a href="https://sameermehmood0756982134-lab.github.io/project4/" target="_blank">Live Demo</a>
+         <a href="https://github.com/sameermehmood0756982134/project4/" target="_blank">GitHub</a>
+         <p>Modern landing page design</p>
+         </div>
+    </div> 
+     </section>
+     
+    <section id="contact" class="contact">
+        <a href="https://wa.me/923299456625" class="btn">Chat on WhatsApp</a>
+        <div class="container">
+            <h2>Contact Me</h2>
+            <a href="mailto:sameermehmood0756982134@gmail.com" class="btn">Email Me</a>
+        <p>Contact via form</p>
+    </div>    
+
+        <form onsubmit="submitForm(event)">
+        <input type="text" id="name"placeholder="Your Name"required><br><br>
+        <input type="email" id="email"placeholder="Your Email"required><br><br>
+        <textarea id="message"placeholder="Your Message"required></textarea><br><br>
+        <button type="submit">Send Message</button>
+    </form>
+        <p id="formMsg"></p>
+        <button onclick="clearData()">Clear Data</button>
+        </section>
+
+            <section id="skills">
+              <h2>My Skills</h2>
+              <div class="skills">
+                <p> HTML</p>
+               <img src="images/html.png" alt="HTML" width="50">
+                <div class="bar">
+                <div class="fill html"></div>
+            </div>
+              </div>
+              <div class="skills">
+              <p> CSS</p>
+                 <img src="images/css.png" alt="CSS" width="50">
+                 <div class="bar">
+                 <div class="fill css"></div>
+                </div>
+            </div>
+            <div class="skills">
+            <p>JavaScript</p>
+                 <img src="images/js.png" alt="JavaScript" width="50">
+                 <div class="bar">
+                <div class="fill javascript"></div>
+                </div>
+         </div>
+         </section>
+
+
+    
+
+<script>
+    function showMessage(){
+        alert("Hello Sameer!👋");
+    }
+    let text="Frontend Developer | UI Designer";
+    let i= 0;
+    function typing(){
+        if(i < text.length){
+            document.getElementById("typing").innerHTML +=text.charAt(i);
+            i++;
+            setTimeout(typing, 50);
+        }
+    }
+      typing();
+    function changeText(){
+        document.getElementById("demo").innerHTML="You clicked the button🎉!"
+    }
+    function toggleMenu(){
+        document.querySelector("nav").classList.toggle("active");
+    }
+    let dark=false;
+
+    function darkMode(){
+        document.body.classList.toggle("dark");
+    }
+
+    let visible=true;
+
+
+    function toggleInfo(){
+        if(visible){
+            document.getElementById("info").style.display="none";
+            visible=false;
+        } else{
+            document.getElementById("info").style.display="block";
+            visible=true;
+        }
+    }
+    function submitForm(event){
+        event.preventDefault();//page reload stop
+    
+
+
+        let name=document.getElementById("name").value;
+        let email=document.getElementById("email").value;
+        let message=document.getElementById("message").value;
+
+        
+        localStorage.setItem("name",name);
+        localStorage.setItem("email",email);
+        localStorage.setItem("message",message);
+
+
+        document.getElementById("formMsg").innerHTML=
+                "Thanks " + name +" ! Your message has been received 🎉";
+
+                document.querySelector("form").reset();
+
+
+                console.log(name , email , message);
+    }
+    
+    window.onload=function(){
+        let savedName=localStorage.getItem("name");
+        let savedEmail=localStorage.getItem("email");
+        let savedMessage=localStorage.getItem("message");
+
+
+        if(savedName){
+            document.getElementById("name").value=savedName;
+            document.getElementById("email").value=savedEmail;
+            document.getElementById("message").value=savedMessage;
+        }
+    }
+    function clearData(){
+        localStorage.clear();
+        location.reload();
+    }
+
+    const sections=document.querySelectorAll("section");
+    const navLinks=document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () =>{
+             sections.forEach(sec=>{
+        let top=window.scrollY;
+        let offset=sec.offsetTop-150;
+        let height=sec.offsetHeight;
+        let id=sec.getAttribute("id");
+
+        if(top >=offset && top < offset + height){
+            navLinks.forEach(link =>{
+                link.classList.remove("active");
+            });
+                document.querySelector("nav a[href*=" + id +"]").classList.add("active");
+            }
+            let secTop=sec.getBoundingClientRect() . top;
+            if(secTop < window.innerHeight-100){
+                sec.classList.add("show");
+            }
+        
+            
+        });
+    });
+    
+    </script>
+
+
+    
+
+
+<footer>
+    <p>© 2026 Sameer | All rights reserved</p>
+
+    <div class="social-links">
+        <a href="https://github.com/sameermehmood0756982134" target="_blank">🐙</a>
+        <a href="https://www.linkedin.com/in/sameermehmood0756982134" target="_blank">💼</a>
+        <a href="mailto:sameermehmood0756982134@email.com">✉️</a>
+    </div>
+</footer>
+
+</body>
+</html>
